@@ -12,6 +12,18 @@
 		184D1E861C7C36A700B388B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D1E841C7C36A700B388B8 /* Main.storyboard */; };
 		184D1E881C7C36A700B388B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184D1E871C7C36A700B388B8 /* Assets.xcassets */; };
 		184D1E8B1C7C36A700B388B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D1E891C7C36A700B388B8 /* LaunchScreen.storyboard */; };
+		184D1E951C7C40F100B388B8 /* Farm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1E941C7C40F100B388B8 /* Farm.swift */; };
+		184D1E971C7C43EF00B388B8 /* FarmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1E961C7C43EF00B388B8 /* FarmTableViewController.swift */; };
+		184D1E991C7C454300B388B8 /* FarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1E981C7C454300B388B8 /* FarmTableViewCell.swift */; };
+		184D1E9B1C7C466900B388B8 /* FarmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1E9A1C7C466900B388B8 /* FarmDetailViewController.swift */; };
+		184D1E9D1C7C49B200B388B8 /* MapViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1E9C1C7C49B200B388B8 /* MapViewContorller.swift */; };
+		184D1EA21C7C54AC00B388B8 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1E9E1C7C54AC00B388B8 /* People.swift */; };
+		184D1EA31C7C54AC00B388B8 /* PeopleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1E9F1C7C54AC00B388B8 /* PeopleDetailViewController.swift */; };
+		184D1EA41C7C54AC00B388B8 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1EA01C7C54AC00B388B8 /* PeopleTableViewController.swift */; };
+		184D1EA51C7C54AC00B388B8 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1EA11C7C54AC00B388B8 /* PeopleTableViewCell.swift */; };
+		184D1EA91C7C54B900B388B8 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1EA61C7C54B900B388B8 /* FriendCollectionViewController.swift */; };
+		184D1EAA1C7C54B900B388B8 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1EA71C7C54B900B388B8 /* FriendCollectionViewCell.swift */; };
+		184D1EAB1C7C54B900B388B8 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1EA81C7C54B900B388B8 /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +34,18 @@
 		184D1E871C7C36A700B388B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184D1E8A1C7C36A700B388B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184D1E8C1C7C36A700B388B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184D1E941C7C40F100B388B8 /* Farm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Farm.swift; sourceTree = "<group>"; };
+		184D1E961C7C43EF00B388B8 /* FarmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmTableViewController.swift; sourceTree = "<group>"; };
+		184D1E981C7C454300B388B8 /* FarmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmTableViewCell.swift; sourceTree = "<group>"; };
+		184D1E9A1C7C466900B388B8 /* FarmDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmDetailViewController.swift; sourceTree = "<group>"; };
+		184D1E9C1C7C49B200B388B8 /* MapViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewContorller.swift; sourceTree = "<group>"; };
+		184D1E9E1C7C54AC00B388B8 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		184D1E9F1C7C54AC00B388B8 /* PeopleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewController.swift; sourceTree = "<group>"; };
+		184D1EA01C7C54AC00B388B8 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		184D1EA11C7C54AC00B388B8 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
+		184D1EA61C7C54B900B388B8 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
+		184D1EA71C7C54B900B388B8 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		184D1EA81C7C54B900B388B8 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +80,19 @@
 			children = (
 				184D1E801C7C36A700B388B8 /* AppDelegate.swift */,
 				184D1E821C7C36A700B388B8 /* ViewController.swift */,
+				184D1E941C7C40F100B388B8 /* Farm.swift */,
+				184D1E961C7C43EF00B388B8 /* FarmTableViewController.swift */,
+				184D1E981C7C454300B388B8 /* FarmTableViewCell.swift */,
 				184D1E841C7C36A700B388B8 /* Main.storyboard */,
+				184D1E9A1C7C466900B388B8 /* FarmDetailViewController.swift */,
+				184D1E9C1C7C49B200B388B8 /* MapViewContorller.swift */,
+				184D1E9E1C7C54AC00B388B8 /* People.swift */,
+				184D1E9F1C7C54AC00B388B8 /* PeopleDetailViewController.swift */,
+				184D1EA01C7C54AC00B388B8 /* PeopleTableViewController.swift */,
+				184D1EA11C7C54AC00B388B8 /* PeopleTableViewCell.swift */,
+				184D1EA61C7C54B900B388B8 /* FriendCollectionViewController.swift */,
+				184D1EA71C7C54B900B388B8 /* FriendCollectionViewCell.swift */,
+				184D1EA81C7C54B900B388B8 /* Friend.swift */,
 				184D1E871C7C36A700B388B8 /* Assets.xcassets */,
 				184D1E891C7C36A700B388B8 /* LaunchScreen.storyboard */,
 				184D1E8C1C7C36A700B388B8 /* Info.plist */,
@@ -137,7 +173,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				184D1E831C7C36A700B388B8 /* ViewController.swift in Sources */,
+				184D1E991C7C454300B388B8 /* FarmTableViewCell.swift in Sources */,
+				184D1EA31C7C54AC00B388B8 /* PeopleDetailViewController.swift in Sources */,
+				184D1EA41C7C54AC00B388B8 /* PeopleTableViewController.swift in Sources */,
+				184D1E971C7C43EF00B388B8 /* FarmTableViewController.swift in Sources */,
 				184D1E811C7C36A700B388B8 /* AppDelegate.swift in Sources */,
+				184D1EA21C7C54AC00B388B8 /* People.swift in Sources */,
+				184D1EA91C7C54B900B388B8 /* FriendCollectionViewController.swift in Sources */,
+				184D1EA51C7C54AC00B388B8 /* PeopleTableViewCell.swift in Sources */,
+				184D1EAA1C7C54B900B388B8 /* FriendCollectionViewCell.swift in Sources */,
+				184D1E9B1C7C466900B388B8 /* FarmDetailViewController.swift in Sources */,
+				184D1EAB1C7C54B900B388B8 /* Friend.swift in Sources */,
+				184D1E951C7C40F100B388B8 /* Farm.swift in Sources */,
+				184D1E9D1C7C49B200B388B8 /* MapViewContorller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -12,11 +14,40 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleAspectFit" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Farm enter scence" translatesAutoresizingMaskIntoConstraints="NO" id="iPi-Oe-c7l">
+                                <rect key="frame" x="-20" y="-11" width="600" height="665"/>
+                                <color key="backgroundColor" red="0.76910176701570676" green="0.76910176701570676" blue="0.76910176701570676" alpha="0.48926750886524817" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="QOa-h4-snP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="jtc-wl-6Ck"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-iF-5YL">
+                                <rect key="frame" x="160" y="245" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="天空菜農夫市集" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVA-9q-R8g">
+                                        <rect key="frame" x="25" y="40" width="190" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97678746727748689" green="0.97678746727748689" blue="0.97678746727748689" alpha="0.80761303191489353" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iPi-Oe-c7l" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="9xG-qq-OBr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iPi-Oe-c7l" secondAttribute="trailing" id="YzL-l5-wkn"/>
+                            <constraint firstItem="iPi-Oe-c7l" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="af3-Uc-okR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iPi-Oe-c7l" secondAttribute="trailing" id="jRZ-XU-kGe"/>
+                            <constraint firstItem="kbi-iF-5YL" firstAttribute="centerX" secondItem="iPi-Oe-c7l" secondAttribute="centerX" id="qZj-I3-L5X"/>
+                            <constraint firstItem="iPi-Oe-c7l" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="zcB-Zd-G1Z"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +55,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Farm enter scence" width="1667" height="1667"/>
+    </resources>
 </document>

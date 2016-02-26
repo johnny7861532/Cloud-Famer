@@ -269,9 +269,6 @@
                                     <constraint firstAttribute="height" constant="100" id="lMD-K6-7LQ"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOD-sR-1MJ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="300"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Qx-AnT" userLabel="MapIcon">
                                 <rect key="frame" x="288" y="372" width="25" height="25"/>
                                 <state key="normal" title="Button" image="map"/>
@@ -279,11 +276,12 @@
                                     <segue destination="mbK-lf-klE" kind="show" identifier="showMap" id="vg8-Ri-3VB"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOD-sR-1MJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.20315978079999999" green="0.48348876860000001" blue="0.79106250320000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="aOD-sR-1MJ" firstAttribute="centerX" secondItem="tnk-Mm-Q2Y" secondAttribute="centerX" id="6rN-hQ-uqI"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="diG-vM-cIP" secondAttribute="leading" id="QXb-GN-dXQ"/>
                             <constraint firstItem="gSo-Jr-MJM" firstAttribute="top" secondItem="diG-vM-cIP" secondAttribute="bottom" id="Ury-i7-5p3"/>
                             <constraint firstItem="diG-vM-cIP" firstAttribute="leading" secondItem="tnk-Mm-Q2Y" secondAttribute="leadingMargin" id="ed6-wa-1Wd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="diG-vM-cIP" secondAttribute="trailing" id="hMu-XH-pyL"/>
@@ -327,14 +325,42 @@
                             <constraint firstAttribute="trailingMargin" secondItem="7Dg-aj-3l4" secondAttribute="trailing" constant="-25" id="kIk-1h-jFw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Lr7-cc-rbY"/>
+                    <navigationItem key="navigationItem" id="6nU-hj-TnT">
+                        <barButtonItem key="leftBarButtonItem" title="Get Direction" id="7ec-eA-qdG">
+                            <connections>
+                                <action selector="showDirection:" destination="mbK-lf-klE" id="oCH-WR-XZH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="AYz-Ip-AWf">
+                            <connections>
+                                <segue destination="UhD-3P-Yuy" kind="unwind" unwindAction="close:" id="YbI-4I-kle"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="7Dg-aj-3l4" id="tvc-cE-uBG"/>
+                        <outlet property="mapView" destination="7Dg-aj-3l4" id="V4E-cP-mLj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="31a-ju-KVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UhD-3P-Yuy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1469" y="-397"/>
+            <point key="canvasLocation" x="1603" y="-579"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vet-QC-w7B">
+            <objects>
+                <navigationController id="hYy-IJ-Qcm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HJi-kx-bf9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mbK-lf-klE" kind="relationship" relationship="rootViewController" id="kOt-hD-aGB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9s0-jI-d2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2257" y="-579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aw0-vI-cwa">
@@ -697,6 +723,7 @@
         <image name="people icon" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ad7-XX-cxf"/>
+        <segue reference="dNa-vi-1sQ"/>
+        <segue reference="vg8-Ri-3VB"/>
     </inferredMetricsTieBreakers>
 </document>

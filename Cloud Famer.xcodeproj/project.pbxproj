@@ -24,6 +24,7 @@
 		184D1EA91C7C54B900B388B8 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1EA61C7C54B900B388B8 /* FriendCollectionViewController.swift */; };
 		184D1EAA1C7C54B900B388B8 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1EA71C7C54B900B388B8 /* FriendCollectionViewCell.swift */; };
 		184D1EAB1C7C54B900B388B8 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D1EA81C7C54B900B388B8 /* Friend.swift */; };
+		184D1EE31C804ACC00B388B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184D1EE21C804ACC00B388B8 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +39,7 @@
 		184D1E961C7C43EF00B388B8 /* FarmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmTableViewController.swift; sourceTree = "<group>"; };
 		184D1E981C7C454300B388B8 /* FarmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmTableViewCell.swift; sourceTree = "<group>"; };
 		184D1E9A1C7C466900B388B8 /* FarmDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmDetailViewController.swift; sourceTree = "<group>"; };
-		184D1E9C1C7C49B200B388B8 /* MapViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewContorller.swift; sourceTree = "<group>"; };
+		184D1E9C1C7C49B200B388B8 /* MapViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewContorller.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		184D1E9E1C7C54AC00B388B8 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		184D1E9F1C7C54AC00B388B8 /* PeopleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewController.swift; sourceTree = "<group>"; };
 		184D1EA01C7C54AC00B388B8 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		184D1EA61C7C54B900B388B8 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
 		184D1EA71C7C54B900B388B8 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		184D1EA81C7C54B900B388B8 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		184D1EE21C804ACC00B388B8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184D1EE31C804ACC00B388B8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 		184D1E741C7C36A700B388B8 = {
 			isa = PBXGroup;
 			children = (
+				184D1EE21C804ACC00B388B8 /* MapKit.framework */,
 				184D1E7F1C7C36A700B388B8 /* Cloud Famer */,
 				184D1E7E1C7C36A700B388B8 /* Products */,
 			);
@@ -133,6 +137,11 @@
 					184D1E7C1C7C36A700B388B8 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = V333C96V2N;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -333,6 +342,7 @@
 				184D1E911C7C36A700B388B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

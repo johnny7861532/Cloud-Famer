@@ -9,14 +9,22 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
+    var farm:Farm!
+    //宣告地標變數
+    var currentPlacemark:CLPlacemark?
+    //宣告Location變數
+    let locationManager = CLLocationManager()
+   
+    var currentRoute:MKRoute?
+    var currentTransportType = MKDirectionsTransportType.Automobile
+    
+    
+
     
     @IBOutlet var mapView:MKMapView!
     
-    var farm:Farm!
-    //宣告Location變數
-    let locationManager = CLLocationManager()
-    
-    override func viewDidLoad() {
+        override func viewDidLoad() {
+        
         
         
         super.viewDidLoad()
@@ -25,16 +33,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         // Convert address to coordinate and annotate it on map
         let geoCoder = CLGeocoder()
         
+        
         geoCoder.geocodeAddressString(farm.location, completionHandler: {placemarks, error in
             if error != nil {
                 print(error)
                 return
             }
-
             
             if let placemarks = placemarks {
                 // Get the first placemark
                 let placemark = placemarks[0]
+                self.currentPlacemark = placemark
+                
                 
                 // Add annotation
                 let annotation = MKPointAnnotation()
@@ -114,7 +124,45 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     */
     
+    @IBAction func showDirection(sender: AnyObject){
     
-    
+    let directionRequest = MKDirectionsRequest()
+    //設定int點
+    directionRequest.source = MKMapItem.mapItemForCurrentLocation()
+    let destinationPlacemark = MKPlacemark(placemark: currentPlacemark!)
+        directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
+        directionRequest.transportType = MKDirectionsTransportType.Automobile
+   //方位計算
+    let directions = MKDirections(request: directionRequest)
+        directions.calculateDirectionsWithCompletionHandler{ (routeResponse, routeError) -> Void in
+            
+            guard let routeResponse = routeResponse else {
+                if let routeError = routeError {
+                    print("Error: \(routeError)")
+                }
+                
+                return
+    }
+            let route = routeResponse.routes[0]
+            self.currentRoute = route
+            self.mapView.removeOverlays(self.mapView.overlays)
+            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
+            let rect = route.polyline.boundingMapRect
+            self.mapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
+            
+
 }
+
+
+    }
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.blueColor()
+        renderer.lineWidth = 8.0
+        
+        return renderer
+    }
+}
+
+
 

@@ -14,10 +14,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var currentPlacemark:CLPlacemark?
     //宣告Location變數
     let locationManager = CLLocationManager()
+    
    
     var currentRoute:MKRoute?
-    var currentTransportType = MKDirectionsTransportType.Automobile
-    
     
 
     
@@ -54,11 +53,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 if let location = placemark.location {
                     annotation.coordinate = location.coordinate
                     
+                    
+                    
+                    
+                   
                     // Display the annotation
                     self.mapView.showAnnotations([annotation], animated: true)
                     self.mapView.selectAnnotation(annotation, animated: true)
+                    
                 }
+               
             }
+         
             
         })
         
@@ -67,8 +73,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.showsScale = true
         mapView.showsTraffic = true
         mapView.showsUserLocation = true
-        
-    
+       
+            
+            
         // Set the MKMapViewDelegate
         mapView.delegate = self
         
@@ -86,6 +93,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     // MARK: - MKMapViewDelegate methods
+    
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "MyPin"
@@ -109,10 +117,30 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         // Pin color customization
         annotationView?.pinTintColor = UIColor.greenColor()
+        // pin draggable
+        annotationView?.draggable = true
+        //設置掉落效果
+        annotationView?.animatesDrop = true
+        annotationView?.canShowCallout = true
+        
+        //dragg後renew
+        
+        
+
         
         return annotationView
+       
+        
+           }
+    //renew new drag information
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, didChangeDragState newState: MKAnnotationViewDragState, fromOldState oldState: MKAnnotationViewDragState) {
+        
+        if newState == MKAnnotationViewDragState.Ending {
+            let annotation = view.annotation
+            print("annotation dropped at: \(annotation?.coordinate.latitude),\(annotation?.coordinate.longitude)")
+        }
     }
-    
+    //renew拖放大頭針位置
     
     /*
     // MARK: - Navigation
@@ -127,7 +155,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBAction func showDirection(sender: AnyObject){
     
     let directionRequest = MKDirectionsRequest()
-    //設定int點
+    //設定intiate點
     directionRequest.source = MKMapItem.mapItemForCurrentLocation()
     let destinationPlacemark = MKPlacemark(placemark: currentPlacemark!)
         directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
@@ -162,6 +190,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         return renderer
     }
+    
 }
 
 
